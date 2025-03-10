@@ -2,9 +2,8 @@ import { useLoaderData, useParams } from 'react-router-dom';
 
 function AlazkarDetails() {
   const data = useLoaderData();
-  // console.log(data);
+
   const { category } = useParams();
-  // console.log(data[category]);
   const dataForRoute = data[category];
   return (
     <div>

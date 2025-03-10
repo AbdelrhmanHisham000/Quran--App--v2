@@ -1,45 +1,4 @@
-// import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { useEffect, useState } from 'react';
 
-// function GoUp() {
-//   const [isVisible, setIsVisible] = useState(false);
-
-//   function toggleVisibility() {
-//     if (window.scrollY > 300) {
-//       setIsVisible(true);
-//     } else {
-//       setIsVisible(false);
-//     }
-//   }
-//   function scrollToTop() {
-//     window.scrollTo({
-//       top: 0,
-//       behavior: 'smooth',
-//     });
-//   }
-//   useEffect(function () {
-//     window.addEventListener('scroll', toggleVisibility);
-//     return () => {
-//       window.removeEventListener('scroll', toggleVisibility);
-//     };
-//   }, []);
-//   return (
-//     <div>
-//       {isVisible && (
-//         <button
-//           aria-label="Scroll back to top"
-//           className="fixed bottom-20 right-10 h-12 w-12 rounded-full bg-gradient-to-r from-blue-500 to-teal-400 text-center leading-10 text-white shadow-xl transition-all hover:from-blue-600 hover:to-teal-500 active:scale-95"
-//           onClick={scrollToTop}
-//         >
-//           <FontAwesomeIcon className="text-white" icon={faArrowUp} />
-//         </button>
-//       )}
-//     </div>
-//   );
-// }
-
-// export default GoUp;
 
 
 import { faArrowUp } from '@fortawesome/free-solid-svg-icons';

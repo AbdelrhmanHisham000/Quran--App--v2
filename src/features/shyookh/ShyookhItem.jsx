@@ -2,7 +2,7 @@ import { useNavigate } from 'react-router-dom';
 import Button from '../../ui/Button';
 
 function ShyookhItem({ recitersDataArr }) {
-  //   const categories = ['ماهر المعقلي', 'ياسر الدوسري'];
+  
   const navigate = useNavigate();
   function handleNavigate(sheikhName) {
     navigate(`/shyookh/${sheikhName}`);

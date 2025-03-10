@@ -22,17 +22,3 @@ function AhadithDetails() {
 
 export default AhadithDetails;
 
-/*
-  // <div className="mx-auto mt-20 w-[800px] rounded-lg bg-white shadow-2xl">
-    //   <p className="px-10 py-20 text-center text-xl font-bold">
-    //     {Ahadith[+hadithNo - 1].arab}
-    //   </p>
-    // </div>
-    // return (
-  //   <div className="mx-auto mt-20 w-full max-w-3xl rounded-lg bg-white shadow-2xl">
-  //     <p className="px-8 py-12 text-center text-2xl font-bold leading-relaxed text-gray-800">
-  //       {Ahadith[+hadithNo - 1].arab}
-  //     </p>
-  //   </div>
-  // );
-*/

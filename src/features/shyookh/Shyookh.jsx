@@ -4,8 +4,7 @@ import ShyookhItem from './ShyookhItem';
 
 function Shyookh() {
   const { reciters } = useLoaderData();
-  // console.log(reciters[0])
-  // console.log(reciters);
+  
   const recitersDataArr = [];
   reciters.map((el) => {
     const recitersData = {
@@ -17,13 +16,10 @@ function Shyookh() {
     recitersDataArr.push(recitersData);
   });
 
-  // console.log(recitersDataArr);
+
 
   return <ShyookhItem recitersDataArr={recitersDataArr} />;
 }
 
-// export async function loader() {
-//   const Reciters = await getReciters();
-//   return Reciters;
-// }
+
 export default Shyookh;

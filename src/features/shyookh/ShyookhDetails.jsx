@@ -1,5 +1,6 @@
 import { useFetcher, useLoaderData, useParams } from 'react-router-dom';
 import Sura from './Sura';
+import Loader from '../../ui/Loader';
 import { useEffect, useState } from 'react';
 // import { getReciters } from '../../services/API';
 
@@ -67,9 +68,9 @@ Since the useState initializer (sheikhName || '') only runs once when the compon
     <div className="m-20" style={{ direction: 'rtl' }}>
       {!selectedSheikh ? (
         <div className="relative right-5 mb-4">
-          {suggestions.length > 0 && (
+          {suggestions?.length > 0 && (
             <ul className="absolute z-10 w-full rounded-lg border border-gray-300 bg-white shadow-lg">
-              {suggestions.map((suggestion) => (
+              {suggestions?.map((suggestion) => (
                 <li
                   key={suggestion.id}
                   onClick={() => handleSelection(suggestion.name)}
@@ -83,8 +84,8 @@ Since the useState initializer (sheikhName || '') only runs once when the compon
         </div>
       ) : (
         <div className="flex flex-wrap justify-center">
-          {QuranAyahs.length > 0 ? (
-            QuranAyahs.map((ayah) => (
+          {QuranAyahs?.length > 0 ? (
+            QuranAyahs?.map((ayah) => (
               <Sura
                 key={ayah.number}
                 number={ayah.number}
@@ -93,9 +94,10 @@ Since the useState initializer (sheikhName || '') only runs once when the compon
               />
             ))
           ) : (
-            <p className="text-center text-gray-500">
-              No suras available for this Sheikh.
-            </p>
+            // <p className="text-center text-gray-500">
+            //   No suras available for this Sheikh.
+            // </p>
+            <Loader/>
           )}
         </div>
       )}
@@ -105,39 +107,4 @@ Since the useState initializer (sheikhName || '') only runs once when the compon
 
 export default ShyookhDetails;
 
-/*
- return (
-    <div className="m-20" style={{ direction: 'rtl' }}>
-      <div className="relative right-5 mb-4">
-        {suggestions.length > 0 && (
-          <ul className="absolute z-10 w-full rounded-lg border border-gray-300 bg-white shadow-lg">
-            {suggestions.map((suggestion) => (
-              <li
-                key={suggestion.id}
-                onClick={() => handleSelection(suggestion.name)}
-                className="cursor-pointer px-4 py-2 text-sm text-gray-700 transition-colors hover:bg-blue-50 hover:text-blue-600"
-              >
-                {suggestion.name}
-              </li>
-            ))}
-          </ul>
-        )}
-      </div>
 
-      {selectedSheikh ? (
-        <div className="flex flex-wrap justify-center">
-          {QuranAyahs.map((ayah) => (
-            <Sura
-              key={ayah.number}
-              number={ayah.number}
-              suraName={ayah.name}
-              selectedSheikh={selectedSheikh}
-            />
-          ))}
-        </div>
-      ) : (
-        <p className="text-center text-gray-500">Please select a Sheikh.</p>
-      )}
-    </div>
-  );
-*/
